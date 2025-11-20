@@ -1,5 +1,50 @@
+<!-- 
+=====================================================================
+ Clarity – Digital Solutions Platform
+ Front-End Angular Track Exam Submission – Route Academy
+=====================================================================
+
+Project Overview (English)
+Clarity – Digital Solutions Platform is my official submission for the 
+Front-End Angular Track Exam at Route Academy.  
+The project demonstrates building a responsive, scalable, and clean UI using:
+- HTML5
+- CSS3
+- Bootstrap 5
+with a structure suitable for future Angular integration.
+
+---------------------------------------------------------------------
+
+GitHub Repository
+User: zizoabdelaziz125  
+Repo: https://github.com/zizoabdelaziz125/Clarity---Digital-Solutions-Platform.git
+
+---------------------------------------------------------------------
+
+Custom License (Usage Terms)
+You are permitted to:
+- View the code  
+- Copy the code for personal learning or reference  
+
+You are NOT permitted to:
+- Modify the code  
+- Reupload, republish, or redistribute the code  
+- Merge the code into other projects  
+- Use the code commercially  
+- Claim the code as your own  
+
+Any violation of these terms is strictly prohibited.
+
+---------------------------------------------------------------------
+
+© 2025 Ahmed Abdelaziz — All Rights Reserved.
+Developed exclusively for educational and evaluation purposes only.
+=====================================================================
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +53,91 @@
 
     <link rel="icon" href="./assets/favicon.png">
 
+    <!-- bootstrap -->
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- FontAwesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Normalize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media.css">
 
 </head>
-<body>
-    
-    
+
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="50" tabindex="0">
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm px-4 py-3">
+        <div class="container-fluid">
+
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center text-gradient-main fs-3 me-3" href="#">
+                <i class="fas fa-cube fa-lg me-2"></i>
+                <span class="fw-bold">Clarity</span>
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services <i class="fa-solid fa-chevron-down ms-1 dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#technology">Technology</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+                <!-- Buttons -->
+                <div class="d-flex">
+                    <button class="btn sign-in-btn" type="button">Sign In</button>
+                    <button class="btn btn-gradient get-start-btn" type="button">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
 </body>
+
 </html>

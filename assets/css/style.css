@@ -1,0 +1,130 @@
+
+/* ================== Set default body ================== */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+}
+
+/* ================== Color Variables ================== */
+:root {
+
+    /*  --color-dark: #7c2d12; */
+    --color-dark: #7C2D12;
+    
+    --color-light: #E8570C;
+    /* --color-light: #c2410c; */
+
+    --gradient-main: linear-gradient(90deg, var(--color-light), var(--color-dark));
+    --gradient-horizontal: linear-gradient(to right, var(--color-light), var(--color-dark));
+    --gradient-vertical: linear-gradient(to bottom, var(--color-light), var(--color-dark));
+}
+
+/* ================== Background Gradients ================== */
+.bg-gradient-main { background: var(--gradient-main); color: #fff; }
+.bg-gradient-horizontal { background: var(--gradient-horizontal); color: #fff; }
+.bg-gradient-vertical { background: var(--gradient-vertical); color: #fff; }
+
+.bg-gradient-hover:hover {
+    background: linear-gradient(to right, var(--color-light), var(--color-dark));
+    color: #fff;
+}
+
+/* ================== Text Gradients ================== */
+.text-gradient-main {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-horizontal {
+    background: var(--gradient-horizontal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-vertical {
+    background: var(--gradient-vertical);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================== Buttons Gradient ================== */
+.btn-gradient {
+    background: var(--gradient-main);
+    color: #fff;
+     /* smooth transition */
+    /* transition: all 0.3s ease; */
+    border-radius: 0.5rem;
+}
+
+/* Hover effect*/
+.btn-gradient:hover {
+    color: #fff;
+    /* transform: translateY(-4px); */
+    box-shadow: 0 8px 15px rgba(232, 87, 12, 0.45);
+}
+
+/* active state  */
+.btn-gradient:active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(232, 87, 12, 0.45);
+}
+
+/* ================== Navbar ================== */
+/* ================== Navbar Dropdown ================== */
+
+.navbar-brand {
+    margin-right: 3rem !important;
+}
+
+.navbar .nav-link {
+    position: relative;
+}
+
+.navbar .nav-link.active {
+    color: var(--color-light) !important;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-light) !important;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-light);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar ul li{
+    margin-right: 1rem;
+    color: #3E495A;
+}
+
+.dropdown-toggle::after { display: none; } /* Remove Bootstrap caret */
+
+.get-start-btn{
+    font-size: large;
+    border-radius: 2rem;
+    padding: 10px 30px;
+}
+
+.sign-in-btn{
+    margin-right: 2rem;
+    color: #3E495A;
+}
+
+.sign-in-btn:hover{
+    color: var(--color-light);
+}
