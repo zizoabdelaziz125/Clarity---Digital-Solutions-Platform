@@ -1,5 +1,6 @@
-
-/* ================== Set default body ================== */
+/* =========================================================
+   Base Setup
+========================================================= */
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
@@ -7,73 +8,111 @@ body {
     color: #000;
 }
 
-/* ================== Color Variables ================== */
+/* =========================================================
+   Color Palette (Final) 
+========================================================= */
 :root {
+    --primary: #E8570C;
+    --secondary: #FF8B3D;
+    --accent: #FFB886;
+    /* --dark:      #272727; */
+    --dark: #7C2D12;
 
-    /*  --color-dark: #7c2d12; */
-    --color-dark: #7C2D12;
-    
-    --color-light: #E8570C;
-    /* --color-light: #c2410c; */
-
-    --gradient-main: linear-gradient(90deg, var(--color-light), var(--color-dark));
-    --gradient-horizontal: linear-gradient(to right, var(--color-light), var(--color-dark));
-    --gradient-vertical: linear-gradient(to bottom, var(--color-light), var(--color-dark));
+    --gradient-main: linear-gradient(90deg, var(--primary), var(--secondary));
+    --gradient-horizontal: linear-gradient(to right, var(--primary), var(--secondary));
+    --gradient-vertical: linear-gradient(to bottom, var(--primary), var(--secondary));
 }
 
-/* ================== Background Gradients ================== */
-.bg-gradient-main { background: var(--gradient-main); color: #fff; }
-.bg-gradient-horizontal { background: var(--gradient-horizontal); color: #fff; }
-.bg-gradient-vertical { background: var(--gradient-vertical); color: #fff; }
-
-.bg-gradient-hover:hover {
-    background: linear-gradient(to right, var(--color-light), var(--color-dark));
+/* =========================================================
+   Background Gradients
+========================================================= */
+.bg-gradient-main {
+    background: var(--gradient-main);
     color: #fff;
 }
 
-/* ================== Text Gradients ================== */
-.text-gradient-main {
-    background: var(--gradient-main);
+.bg-gradient-horizontal {
+    background: var(--gradient-horizontal);
+    color: #fff;
+}
+
+.bg-gradient-vertical {
+    background: var(--gradient-vertical);
+    color: #fff;
+}
+
+.bg-gradient-hover:hover {
+    background: var(--gradient-horizontal);
+    color: #fff;
+}
+
+/* =========================================================
+   Text Gradients
+========================================================= */
+.text-gradient-main,
+.text-gradient-horizontal,
+.text-gradient-vertical {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-main {
+    background: var(--gradient-main);
 }
 
 .text-gradient-horizontal {
     background: var(--gradient-horizontal);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-vertical {
     background: var(--gradient-vertical);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-/* ================== Buttons Gradient ================== */
+/* Custom hero title gradients */
+.text-gradient-1 {
+    background: linear-gradient(to right, var(--dark), var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-gradient-2 {
+    background: linear-gradient(to right, var(--accent), var(--primary));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text-dark {
+    color: var(--dark) !important;
+}
+
+/* =========================================================
+   Buttons
+========================================================= */
 .btn-gradient {
     background: var(--gradient-main);
+    border: none;
     color: #fff;
-     /* smooth transition */
-    /* transition: all 0.3s ease; */
-    border-radius: 0.5rem;
+    border-radius: .5rem;
+    transition: 0.3s ease;
 }
 
-/* Hover effect*/
 .btn-gradient:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(232, 87, 12, 0.35);
     color: #fff;
-    /* transform: translateY(-4px); */
-    box-shadow: 0 8px 15px rgba(232, 87, 12, 0.45);
 }
 
-/* active state  */
 .btn-gradient:active {
     transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(232, 87, 12, 0.45);
+    box-shadow: 0 8px 15px rgba(232, 87, 12, 0.35);
 }
 
-/* ================== Navbar ================== */
-/* ================== Navbar Dropdown ================== */
+/* =========================================================
+   Navbar
+========================================================= */
+.navbar {
+    z-index: 999;
+}
 
 .navbar-brand {
     margin-right: 3rem !important;
@@ -81,16 +120,15 @@ body {
 
 .navbar .nav-link {
     position: relative;
+    color: #3E495A;
 }
 
-.navbar .nav-link.active {
-    color: var(--color-light) !important;
-}
-
+.navbar .nav-link.active,
 .navbar .nav-link:hover {
-    color: var(--color-light) !important;
+    color: var(--primary) !important;
 }
 
+/* underline animation */
 .navbar .nav-link::after {
     content: "";
     position: absolute;
@@ -98,7 +136,7 @@ body {
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: var(--color-light);
+    background-color: var(--primary);
     transition: width 0.3s ease-in-out;
 }
 
@@ -107,24 +145,118 @@ body {
     width: 100%;
 }
 
-.navbar ul li{
-    margin-right: 1rem;
-    color: #3E495A;
+.dropdown-toggle::after {
+    display: none;
 }
 
-.dropdown-toggle::after { display: none; } /* Remove Bootstrap caret */
-
-.get-start-btn{
+/* Auth Buttons */
+.get-start-btn {
     font-size: large;
     border-radius: 2rem;
     padding: 10px 30px;
 }
 
-.sign-in-btn{
+.sign-in-btn {
     margin-right: 2rem;
     color: #3E495A;
 }
 
-.sign-in-btn:hover{
-    color: var(--color-light);
+.sign-in-btn:hover {
+    color: var(--primary);
+}
+
+/* =========================================================
+   Hero Section
+========================================================= */
+
+#hero {
+    padding-top: 80px;
+    margin-top: 0 !important;
+}
+
+.hero-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+#hero .container-fluid,
+#hero .row {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.hero-section h1 {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 75px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+}
+
+/* Badge */
+.hero-badge {
+    background-color: rgba(232, 87, 12, 0.08);
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+/* Image Background Tilt Box */
+.hero-bg-box {
+    background: linear-gradient(to right,
+            rgba(232, 87, 12, 0.15),
+            rgba(255, 139, 61, 0.15));
+    transform: rotate(3deg);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Floating Icons */
+.floating-icon {
+    position: absolute;
+    background: linear-gradient(to bottom right, var(--accent), var(--primary));
+    color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.icon-1 {
+    top: -25px;
+    right: -25px;
+}
+
+.icon-2 {
+    bottom: -25px;
+    left: -25px;
+}
+
+/* =========================================================
+   Animations
+========================================================= */
+.animate-up {
+    animation: fadeUp 0.9s ease forwards;
+    opacity: 0;
+}
+
+.delay-1 {
+    animation-delay: 0.25s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
