@@ -1,8 +1,7 @@
 # Clarity – Digital Solutions Platform
 
-## 🇬🇧 English Section
+## 📌 Overview
 
-### 📌 Overview
 Clarity – Digital Solutions Platform is my project submission for the Front-End Angular Track Exam at Route Academy.  
 The project demonstrates building a clean and responsive user interface using **HTML, CSS, and Bootstrap**, following the required design structure of the course exam.
 
@@ -25,9 +24,8 @@ This project was developed as part of the Route Academy evaluation for front-end
 
 ---
 
-## 🇦🇪 القسم العربي
 
-### 📌 نظرة عامة
+## 📌 نظرة عامة
 مشروع **Clarity – منصة الحلول الرقمية** هو تسليم امتحان الفرونت إند الخاص بمسار **Angular** في منصة **Route Academy**.  
 يعرض المشروع واجهة مستخدم متجاوبة ومصممة باستخدام **HTML وCSS وBootstrap** مع الالتزام بالهيكلة المطلوبة في الاختبار.
 
